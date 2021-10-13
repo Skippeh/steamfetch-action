@@ -36,6 +36,8 @@ inputs:
 runs:
   using: "composite"
   steps:
+    - name: "Clone repository"
+      uses: actions/checkout@v2"
     - name: "Setup dotnet"
       uses: actions/setup-dotnet@v1
       with:
@@ -51,6 +53,6 @@ runs:
     - run: "unzip ./depotdownloader-2.4.5.zip -d ./"
       working-directory: "${{ github.action_path }}/depotdownloader/"
       shell: bash
-    - run: "${{ github.action_path }}/job.sh"
+    - run: "${{ GITHUB_WORKSPACE }}/job.sh"
       shell: bash
       working-directory: "${{ github.action_path }}/depotdownloader/"
