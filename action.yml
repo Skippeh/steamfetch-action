@@ -51,8 +51,9 @@ runs:
     - run: "unzip ./depotdownloader-2.4.5.zip -d ./"
       working-directory: "${{ github.action_path }}/depotdownloader/"
       shell: bash
-    - run: |
-        "ls $GITHUB_ACTION_PATH"
-        "chmod +x $GITHUB_ACTION_PATH/job.sh"
-        "$GITHUB_ACTION_PATH/job.sh"
+    - run: ls $GITHUB_ACTION_PATH
+      shell: bash
+    - run: chmod +x $GITHUB_ACTION_PATH/job.sh
+      shell: bash
+    - run: $GITHUB_ACTION_PATH/job.sh
       shell: bash
