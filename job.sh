@@ -34,3 +34,5 @@ fi
 
 # debug
 echo "args: $args"
+
+dotnet ./depotdownloader/DepotDownloader.dll $args
