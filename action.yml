@@ -26,6 +26,10 @@ inputs:
     description: "Optionally specify which beta branch to download (default is Public)"
     required: false
     default: "Public"
+  beta-password:
+    description: "Optionally specify the password for the beta branch"
+    required: false
+    default: ""
   osarch:
     description: "Target OS architecture to download. Valid options are 32, 64"
     required: true
@@ -33,6 +37,10 @@ inputs:
     description: "Optionally specify a unique login 32bit integer. Required if running multiple instances of this action concurrently, or if you don't want steam friends to get signed out if using a personal account"
     required: false
     default: 0
+  language:
+    description: "Optionally specify a language. Default is english"
+    required: false
+    default: "english"
 runs:
   using: "composite"
   steps:
@@ -55,3 +63,15 @@ runs:
       shell: bash
     - run: $GITHUB_ACTION_PATH/job.sh
       shell: bash
+      env:
+        INPUT_USERNAME: ${{ inputs.username }}
+        INPUT_PASSWORD: ${{ inputs.password }}
+        INPUT_OUTDIR: ${{ inputs.outDir }}
+        INPUT_OS: ${{ inputs.os }}
+        INPUT_FILES: ${{ inputs.files }}
+        INPUT_APP: ${{ inputs.app }}
+        INPUT_BETA: ${{ inputs.beta }}
+        INPUT_BETA_PASSWORD: ${{ inputs.beta-password }}
+        INPUT_OSARCH: ${{ inputs.osarch }}
+        INPUT_LOGINID: ${{ inputs.loginid }}
+        INPUT_LANGUAGE: ${{ inputs.language }}
