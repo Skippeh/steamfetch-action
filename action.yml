@@ -53,6 +53,6 @@ runs:
     - run: "unzip ./depotdownloader-2.4.5.zip -d ./"
       working-directory: "${{ github.action_path }}/depotdownloader/"
       shell: bash
-    - run: "${{ GITHUB_WORKSPACE }}/job.sh"
+    - run: "${{ github.action_path }}/job.sh"
       shell: bash
       working-directory: "${{ github.action_path }}/depotdownloader/"
