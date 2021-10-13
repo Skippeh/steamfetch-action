@@ -26,8 +26,11 @@ add_arg_if_not_empty "-osarch" "$INPUT_OSARCH"
 add_arg_if_not_empty "-loginid" "$INPUT_LOGINID"
 add_arg_if_not_empty "-language" "$INPUT_LANGUAGE"
 
-# todo: create filelist if input files are specified and add filelist argument
+# Create filelist if input files are specified and add -filelist argument
+if [ "$INPUT_FILES" ]; then
+    echo "$INPUT_FILES" > ./filelist.txt
+    add_arg_if_not_empty "-filelist" "./filelist.txt"
+fi
 
 # debug
 echo "args: $args"
-echo "files: $INPUT_FILES"
