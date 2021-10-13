@@ -52,7 +52,7 @@ runs:
       working-directory: "${{ github.action_path }}/depotdownloader/"
       shell: bash
     - run: |
-        "ls ${{ github.action_path }}"
-        "chmod +x ${{ github.action_path }}/job.sh"
-        "${{ github.action_path }}/job.sh"
+        "ls $GITHUB_ACTION_PATH"
+        "chmod +x $GITHUB_ACTION_PATH/job.sh"
+        "$GITHUB_ACTION_PATH/job.sh"
       shell: bash
