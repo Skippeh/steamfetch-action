@@ -10,7 +10,7 @@ function add_arg_if_not_empty() {
         return 0
     fi
 
-    args+="$name $val "
+    args+="$name \"$val\" "
     return 1
 }
 
