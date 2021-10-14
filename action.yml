@@ -41,6 +41,34 @@ inputs:
     description: "Optionally specify a language. Default is english"
     required: false
     default: "english"
+  max-downloads:
+    description: "Optionally specify maximum numbers of chunks to download concurrently. Default is 8"
+    required: false
+    default: "8"
+  max-servers:
+    description: "Optionally specify maximm number of content servers to use. Default is 20"
+    required: false
+    default: "20"
+  cellid:
+    description: "Optionally override the cell id of the content server to download from"
+    required: false
+    default: ""
+  pubfile:
+    description: "Optionally specify the published file id to download (will automatically resolve to UGC id). Used for downloading from the workshop"
+    required: false
+    default: ""
+  ugc:
+    description: "Optionally specify the UGC id to download. Used for downloading from the workshop"
+    required: false
+    default: ""
+  manifest:
+    description: "Optionally specify which manifest id to download. Requires depot to be specified"
+    required: false
+    default: ""
+  depot:
+    description: "Optionally specify the depot id to download. Required if downloading a specific manifest"
+    required: false
+    default: ""
 runs:
   using: "composite"
   steps:
@@ -76,3 +104,10 @@ runs:
         INPUT_OSARCH: ${{ inputs.osarch }}
         INPUT_LOGINID: ${{ inputs.loginid }}
         INPUT_LANGUAGE: ${{ inputs.language }}
+        INPUT_MAXDOWNLOADS: ${{ inputs.max-downloads }}
+        INPUT_MAXSERVERS: ${{ inputs.max-servers }}
+        INPUT_CELLID: ${{ input.cellid }}
+        INPUT_PUBFILE: ${{ input.pubfile }}
+        INPUT_UGC: ${{ input.ugc }}
+        INPUT_MANIFEST: ${{ input.manifest }}
+        INPUT_DEPOT: ${{ input.depot }}
