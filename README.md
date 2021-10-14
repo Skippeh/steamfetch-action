@@ -34,104 +34,28 @@ steps:
 ```
 
 ## Inputs
-### dir
-<sub>required</sub>
 
-The directory in which to place the downloaded files.
-
-### os
-<sub>required</sub>
-
-<sub>Values: ```windows```, ```macos```, ```linux```
-
-Decides which version of the game is downloaded.
-
-### app
-<sub>required</sub>
-
-The id of the application to download.
-
-### osarch
-<sub>required</sub>
-
-<sub>Values: ```32```, ```64```</sub>
-
-Target OS architecture to download.
-
-### username
-<sub>default: *none*</sub>
-
-Optionally provide Steam account username. If unspecified then we'll log in anonymously.
-
-### password
-<sub>default: *none*</sub>
-
-Optionally provide Steam account password. If unspecified then we'll log in anonymously.
-
-### files
-<sub>default: *none*</sub>
-
-Optionally provide an array of files to download. If unspecified all files will be downloaded.
-
-### beta
-<sub>default: ```Public```</sub>
-
-Optionally specify which beta branch to download.
-
-### beta-password
-<sub>default: *none*</sub>
-
-Optionally specify a password for the beta branch.
-
-### loginid
-<sub>default: *none*</sub>
-
-Optionally specify a unique login 32bit integer. Required if running multiple instances of this action concurrently, or if you don't want steam friends to get signed out when using a personal account.
-
-### language
-<sub>default: ```english```</sub>
-
-Optionally specify a language.
-
-### max-downloads
-<sub>default: ```8```
-
-Optionally specify maximum numbers of chunks to download concurrently.
-
-### max-servers
-<sub>default: ```20````</sub>
-
-Optionally specify maximm number of content servers to use.
-
-### cellid
-<sub>default: *none*</sub>
-
-Optionally override the cell id of the content server to download from.
-
-### pubfile
-<sub>default: *none*</sub>
-
-Optionally specify the published file id to download (will automatically resolve to UGC id). Used for downloading from the workshop.
-
-### ugc
-<sub>default: *none*</sub>
-
-Optionally specify the UGC id to download. Used for downloading from the workshop.
-
-### manifest
-<sub>default: *none*</sub>
-
-Optionally specify which manifest id to download. Requires depot to be specified.
-
-### depot
-<sub>default: *none*</sub>
-
-Optionally specify the depot id to download. Required if downloading a specific manifest.
-
-### keep-depotdownloader
-<sub>default: ```false```</sub>
-
-If true then the .DepotDownloader folder will not be deleted from the out directory.
+| Name                 | Description                                                                                                                                                                     | Required    | Values             | Default     |
+| -------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------- | ------------------ | ----------- |
+| sub                  | The directory in which to place the downloaded files.                                                                                                                           | ```true```  |                    |             |
+| os                   | Decides which version of the game is downloaded.                                                                                                                                | ```true```  |                    |             |
+| app                  | The id of the application to download.                                                                                                                                          | ```true```  |                    |             |
+| osarch               | Target OS architecture to download.                                                                                                                                             | ```true```  | ```32```, ```64``` |             |
+| username             | Steam account username. If unspecified then we'll log in anonymously.                                                                                                           | ```false``` |                    |             |
+| password             | Steam account password. If unspecified then we'll log in anonymously.                                                                                                           | ```false``` |                    |             |
+| files                | An array of files to download. If unspecified all files will be downloaded.                                                                                                     | ```false``` |                    |             |
+| beta                 | Which beta branch to download.                                                                                                                                                  | ```false``` |                    |             |
+| beta-password        | The password for the beta branch.                                                                                                                                               | ```false``` |                    |             |
+| loginid              | A unique 32bit integer. Required if running multiple instances of this action concurrently, or if you don't want steam friends to get signed out when using a personal account. | ```false``` |                    |             |
+| language             | The language to download.                                                                                                                                                       | ```false``` |                    | english     |
+| max-downloads        | Maximum number of chunks to download concurrently.                                                                                                                              | ```false``` |                    | 8           |
+| max-servers          | Maximum number of content servers to use.                                                                                                                                       | ```false``` |                    | 20          |
+| cellid               | Override the cell id of the content server to download from.                                                                                                                    | ```false``` |                    |             |
+| pubfile              | The published file id to download (will automatically resolve to UGC id). Used for downloading from the workshop.                                                               | ```false``` |                    |             |
+| ugc                  | The UGC id to download. Used for downloading from the workshop.                                                                                                                 | ```false``` |                    |             |
+| manifest             | The manifest id to download. Required depot to be specified.                                                                                                                    | ```false``` |                    |             |
+| depot                | The depot id to download. Required if downloading a specific manifest.                                                                                                          | ```false``` |                    |             |
+| keep-depotdownloader | If true then the .DepotDownloader folder will not be deleted from the out directory.                                                                                            | ```false``` |                    | ```false``` |
 
 ## Outputs
 None
