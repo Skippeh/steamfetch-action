@@ -1,76 +1,76 @@
 name: "Steamfetch"
-description: "Github action that downloads files from applications on Steam"
+description: "This action is a wrapper for DepotDownloader which is used to download files from Steam."
 inputs:
   username:
-    description: "Optionally provide Steam account username. If unspecified then we'll log in anonymously"
+    description: "Optionally provide Steam account username. If unspecified then we'll log in anonymously."
     required: false
     default: ""
   password:
-    description: "Optionally provide Steam account password. If unspecified then we'll log in anonymously"
+    description: "Optionally provide Steam account password. If unspecified then we'll log in anonymously."
     required: false
     default: ""
   dir:
-    description: "The directory in which to place the downloaded files"
+    description: "The directory in which to place the downloaded files."
     required: true
   os:
-    description: "Decides which version of the game is downloaded. Possible values are windows, macos, linux"
+    description: "Decides which version of the game is downloaded. Possible values are windows, macos, linux."
     required: true
   files:
     description: "Optionally provide an array of files to download. If unspecified all files will be downloaded."
     required: false
     default: ""
   app:
-    description: "The id of the application to download"
+    description: "The id of the application to download."
     required: true
   beta:
-    description: "Optionally specify which beta branch to download. Default is Public"
+    description: "Optionally specify which beta branch to download. Default is Public."
     required: false
     default: "Public"
   beta-password:
-    description: "Optionally specify a password for the beta branch"
+    description: "Optionally specify a password for the beta branch."
     required: false
     default: ""
   osarch:
-    description: "Target OS architecture to download. Possible values are 32, 64"
+    description: "Target OS architecture to download. Possible values are 32, 64."
     required: true
   loginid:
-    description: "Optionally specify a unique login 32bit integer. Required if running multiple instances of this action concurrently, or if you don't want steam friends to get signed out when using a personal account"
+    description: "Optionally specify a unique login 32bit integer. Required if running multiple instances of this action concurrently, or if you don't want steam friends to get signed out when using a personal account."
     required: false
     default: ""
   language:
-    description: "Optionally specify a language. Default is english"
+    description: "Optionally specify a language. Default is english."
     required: false
     default: "english"
   max-downloads:
-    description: "Optionally specify maximum numbers of chunks to download concurrently. Default is 8"
+    description: "Optionally specify maximum numbers of chunks to download concurrently. Default is 8."
     required: false
     default: "8"
   max-servers:
-    description: "Optionally specify maximm number of content servers to use. Default is 20"
+    description: "Optionally specify maximm number of content servers to use. Default is 20."
     required: false
     default: "20"
   cellid:
-    description: "Optionally override the cell id of the content server to download from"
+    description: "Optionally override the cell id of the content server to download from."
     required: false
     default: ""
   pubfile:
-    description: "Optionally specify the published file id to download (will automatically resolve to UGC id). Used for downloading from the workshop"
+    description: "Optionally specify the published file id to download (will automatically resolve to UGC id). Used for downloading from the workshop."
     required: false
     default: ""
   ugc:
-    description: "Optionally specify the UGC id to download. Used for downloading from the workshop"
+    description: "Optionally specify the UGC id to download. Used for downloading from the workshop."
     required: false
     default: ""
   manifest:
-    description: "Optionally specify which manifest id to download. Requires depot to be specified"
+    description: "Optionally specify which manifest id to download. Requires depot to be specified."
     required: false
     default: ""
   depot:
-    description: "Optionally specify the depot id to download. Required if downloading a specific manifest"
+    description: "Optionally specify the depot id to download. Required if downloading a specific manifest."
     required: false
     default: ""
   keep-depotdownloader:
-    description: "If true then the .DepotDownloader folder will not be deleted from the out directory"
+    description: "If true then the .DepotDownloader folder will not be deleted from the out directory."
     required: false
     default: false
 runs:
