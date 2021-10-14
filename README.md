@@ -6,7 +6,7 @@ This action is a wrapper for DepotDownloader which is used to download files fro
 Basic:
 ```yml
 steps:
-  - uses: "Skippeh/steamfetch-action@v0.1.0-alpha"
+  - uses: "Skippeh/steamfetch-action@v1"
     with:
       username: "${{ secrets.STEAM_USER }}"
       password: "${{ secrets.STEAM_PASS }}"
@@ -20,7 +20,7 @@ steps:
 Multiple files including regex:
 ```yml
 steps:
-  - uses: "Skippeh/steamfetch-action@v0.1.0-alpha"
+  - uses: "Skippeh/steamfetch-action@v1"
     with:
       username: "${{ secrets.STEAM_USER }}"
       password: "${{ secrets.STEAM_PASS }}"
