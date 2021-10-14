@@ -37,7 +37,7 @@ steps:
 
 | Name                 | Description                                                                                                                                                                     | Required    | Values             | Default     |
 | -------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------- | ------------------ | ----------- |
-| sub                  | The directory in which to place the downloaded files.                                                                                                                           | ```true```  |                    |             |
+| dir                  | The directory in which to place the downloaded files.                                                                                                                           | ```true```  |                    |             |
 | os                   | Decides which version of the game is downloaded.                                                                                                                                | ```true```  |                    |             |
 | app                  | The id of the application to download.                                                                                                                                          | ```true```  |                    |             |
 | osarch               | Target OS architecture to download.                                                                                                                                             | ```true```  | ```32```, ```64``` |             |
