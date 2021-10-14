@@ -106,8 +106,8 @@ runs:
         INPUT_LANGUAGE: ${{ inputs.language }}
         INPUT_MAXDOWNLOADS: ${{ inputs.max-downloads }}
         INPUT_MAXSERVERS: ${{ inputs.max-servers }}
-        INPUT_CELLID: ${{ input.cellid }}
-        INPUT_PUBFILE: ${{ input.pubfile }}
-        INPUT_UGC: ${{ input.ugc }}
-        INPUT_MANIFEST: ${{ input.manifest }}
-        INPUT_DEPOT: ${{ input.depot }}
+        INPUT_CELLID: ${{ inputs.cellid }}
+        INPUT_PUBFILE: ${{ inputs.pubfile }}
+        INPUT_UGC: ${{ inputs.ugc }}
+        INPUT_MANIFEST: ${{ inputs.manifest }}
+        INPUT_DEPOT: ${{ inputs.depot }}
