@@ -37,13 +37,7 @@ add_arg_if_not_empty "-depot" "$INPUT_DEPOT"
 if [ "$INPUT_FILES" ]; then
     echo "$INPUT_FILES" > ./filelist.txt
     add_arg_if_not_empty "-filelist" "./filelist.txt"
-
-    # debug output filelist.txt
-    cat ./filelist.txt
 fi
-
-# debug
-echo "args: $args"
 
 dotnet ./depotdownloader/DepotDownloader.dll $args
 
