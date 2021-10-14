@@ -10,33 +10,33 @@ inputs:
     required: false
     default: ""
   outDir:
-    description: "The directory to download the files to"
+    description: "The directory in which to place the downloaded files"
     required: true
   os:
-    description: "Decides which version of the game is downloaded. Valid options are windows, macos, linux"
+    description: "Decides which version of the game is downloaded. Possible values are windows, macos, linux"
     required: true
   files:
-    description: "Optionally provide an array of files to download"
+    description: "Optionally provide an array of files to download. If unspecified all files will be downloaded."
     required: false
     default: ""
   app:
-    description: "The id of the application to download (aka appid)"
+    description: "The id of the application to download"
     required: true
   beta:
-    description: "Optionally specify which beta branch to download (default is Public)"
+    description: "Optionally specify which beta branch to download. Default is Public"
     required: false
     default: "Public"
   beta-password:
-    description: "Optionally specify the password for the beta branch"
+    description: "Optionally specify a password for the beta branch"
     required: false
     default: ""
   osarch:
-    description: "Target OS architecture to download. Valid options are 32, 64"
+    description: "Target OS architecture to download. Possible values are 32, 64"
     required: true
   loginid:
-    description: "Optionally specify a unique login 32bit integer. Required if running multiple instances of this action concurrently, or if you don't want steam friends to get signed out if using a personal account"
+    description: "Optionally specify a unique login 32bit integer. Required if running multiple instances of this action concurrently, or if you don't want steam friends to get signed out when using a personal account"
     required: false
-    default: 0
+    default: ""
   language:
     description: "Optionally specify a language. Default is english"
     required: false
