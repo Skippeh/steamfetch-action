@@ -69,6 +69,10 @@ inputs:
     description: "Optionally specify the depot id to download. Required if downloading a specific manifest"
     required: false
     default: ""
+  keep-depotdownloader:
+    description: "If true then the .DepotDownloader folder will not be deleted from the out directory"
+    required: false
+    default: false
 runs:
   using: "composite"
   steps:
@@ -111,3 +115,4 @@ runs:
         INPUT_UGC: ${{ inputs.ugc }}
         INPUT_MANIFEST: ${{ inputs.manifest }}
         INPUT_DEPOT: ${{ inputs.depot }}
+        INPUT_KEEP_DEPOTDOWNLOADER: ${{ inputs.keep-depotdownloader }}

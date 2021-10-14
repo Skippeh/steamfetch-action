@@ -43,3 +43,8 @@ fi
 echo "args: $args"
 
 dotnet ./depotdownloader/DepotDownloader.dll $args
+
+if [ "$INPUT_KEEP_DEPOTDOWNLOADER" != "true" ]; then
+    # Delete .DepotDownloader folder
+    rm -r "$INPUT_DIR/.DepotDownloader"
+fi
