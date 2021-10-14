@@ -17,7 +17,7 @@ function add_arg_if_not_empty() {
 # Add all the 'simple' arguments
 add_arg_if_not_empty "-username" "$INPUT_USERNAME"
 add_arg_if_not_empty "-password" "$INPUT_PASSWORD"
-add_arg_if_not_empty "-dir" "$INPUT_OUTDIR"
+add_arg_if_not_empty "-dir" "$INPUT_DIR"
 add_arg_if_not_empty "-os" "$INPUT_OS"
 add_arg_if_not_empty "-app" "$INPUT_APP"
 add_arg_if_not_empty "-beta" "$INPUT_BETA"

@@ -9,7 +9,7 @@ inputs:
     description: "Optionally provide Steam account password. If unspecified then we'll log in anonymously"
     required: false
     default: ""
-  outDir:
+  dir:
     description: "The directory in which to place the downloaded files"
     required: true
   os:
@@ -67,7 +67,7 @@ runs:
       env:
         INPUT_USERNAME: ${{ inputs.username }}
         INPUT_PASSWORD: ${{ inputs.password }}
-        INPUT_OUTDIR: ${{ inputs.outDir }}
+        INPUT_DIR: ${{ inputs.dir }}
         INPUT_OS: ${{ inputs.os }}
         INPUT_FILES: ${{ inputs.files }}
         INPUT_APP: ${{ inputs.app }}
