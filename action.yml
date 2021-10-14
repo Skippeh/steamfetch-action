@@ -1,5 +1,8 @@
 name: "Steamfetch"
 description: "This action is a wrapper for DepotDownloader which is used to download files from Steam."
+branding:
+  icon: "download"
+  color: "gray-dark"
 inputs:
   username:
     description: "Optionally provide Steam account username. If unspecified then we'll log in anonymously."
