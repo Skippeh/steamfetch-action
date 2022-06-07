@@ -89,7 +89,7 @@ runs:
     - name: "Download DepotDownloader"
       uses: "suisei-cn/actions-download-file@v1"
       with:
-        url: "https://github.com/SteamRE/DepotDownloader/releases/download/DepotDownloader_2.4.5/depotdownloader-2.4.5.zip"
+        url: "https://github.com/SteamRE/DepotDownloader/releases/download/DepotDownloader_2.4.6/depotdownloader-2.4.6.zip"
         target: "${{ github.action_path }}/depotdownloader/"
     - run: "unzip ./depotdownloader-2.4.5.zip -d ./"
       working-directory: "${{ github.action_path }}/depotdownloader/"
